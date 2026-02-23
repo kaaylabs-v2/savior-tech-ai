@@ -43,7 +43,7 @@ CLUSTER="dev-oralia"
 START_CMD="start"
 JSON_FILE="oralia-sandbox-dev"
 startDeploy
-elif [ "$GIT_BRANCH" = "main" ]
+elif [ "$GIT_BRANCH" = "master" ]
 then
 SERVICE_NAME="savior-tech-service"
 IMAGE_VERSION="${GIT_BRANCH}-${BUILD_NUMBER}"

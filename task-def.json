@@ -1,0 +1,33 @@
+{
+    "family": "savior-tech",
+    "taskRoleArn": "arn:aws:iam::891377352857:role/ecsanywhererole",
+    "containerDefinitions": [
+      {
+        "name": "savior-tech",
+        "image": "891377352857.dkr.ecr.us-east-1.amazonaws.com/savior-tech:GIT_COMMIT",
+        "cpu": 300,
+        "memory": 300,
+        "memoryReservation": 200,
+        "volumesFrom": [],
+        "portMappings": [
+          {
+            "hostPort": 0,
+            "containerPort": 80,
+            "protocol": "tcp"
+          }
+        ],
+        "logConfiguration": {
+          "logDriver": "awslogs",
+          "options": {
+            "awslogs-group": "GROUP_NAME",
+            "awslogs-region": "us-east-1",
+            "awslogs-stream-prefix": "savior-tech"
+          }
+        },
+        "essential": true,
+        "environment": [
+        ],
+        "mountPoints": []
+      }
+    ]
+  }
